@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/MishaHryvinskyi.github.io/goit-react-hw-08-phonebook/static/css/main.34911db0.css",
+    "main.js": "/MishaHryvinskyi.github.io/goit-react-hw-08-phonebook/static/js/main.4c43e6dd.js",
+    "index.html": "/MishaHryvinskyi.github.io/goit-react-hw-08-phonebook/index.html",
+    "main.34911db0.css.map": "/MishaHryvinskyi.github.io/goit-react-hw-08-phonebook/static/css/main.34911db0.css.map",
+    "main.4c43e6dd.js.map": "/MishaHryvinskyi.github.io/goit-react-hw-08-phonebook/static/js/main.4c43e6dd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.34911db0.css",
+    "static/js/main.4c43e6dd.js"
+  ]
+}
