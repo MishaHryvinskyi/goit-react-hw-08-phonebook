@@ -7,7 +7,7 @@ export const Navigation = styled.nav`
     padding: 20px;
 `;
 
-export const Link = styled(NavLink)`
+export const StyledLink = styled(NavLink)`
     color: white;
     margin-right: 20px;
     text-decoration: none;
