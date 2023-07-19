@@ -6,6 +6,6 @@ export const RegisterContainer = styled.div`
     justify-content: space-around;
     align-items: center;
     background-color: #a2a8d3;
-    padding-bottom: 190px;
+    padding-bottom: 193px;
     padding-top: 100px;
 `;

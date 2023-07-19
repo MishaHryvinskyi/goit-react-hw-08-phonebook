@@ -16,7 +16,7 @@ const Filter = () => {
   const handleChange = e => {
     dispatch(changeFilter(e.target.value));
   };
-
+  
   return (
     <FormFilter>
       <InputFilter

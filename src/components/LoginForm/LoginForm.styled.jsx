@@ -6,7 +6,7 @@ export const LoginContainer = styled.div`
     justify-content: space-around;
     align-items: center;
     background-color: #a2a8d3;
-    padding-bottom: 260px;
+    padding-bottom: 269px;
     padding-top: 100px;
 `;
 

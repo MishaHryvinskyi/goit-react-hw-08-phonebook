@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 
 export const Container = styled.div`
-    padding-top: 60px;
+    padding-top: 94px;
     padding-bottom: 95px;
     display: flex;
     flex-direction: column;

@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 import { nanoid } from '@reduxjs/toolkit';
-import { notifyOptions } from 'components/notifyOptions/notifyOperations';
 import { getVisibleContacts } from 'redux/Contacts/selector';
 import { addContact } from 'redux/Contacts/operations';
 import { FormatListForm, InputFilter, Container, SpanFormInput, FormBtn, Label } from './FormatList.styled';
