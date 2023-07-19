@@ -1,5 +1,15 @@
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/Authorization/operation';
+import { AiOutlineLogin } from "react-icons/ai";
+import { 
+  LoginContainer,
+  FormLogin,
+  InputFilter,
+  LoginTitle,
+  ContainerInput,
+  LoginBtn
+} from './LoginForm.styled';
+import { PiAtBold, PiPasswordFill } from "react-icons/pi";
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
@@ -17,11 +27,12 @@ export const LoginForm = () => {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <input
+    <LoginContainer>
+      <LoginTitle>Login</LoginTitle>
+      <FormLogin onSubmit={handleSubmit}>
+        <ContainerInput>
+          <PiAtBold size={30} style={{ color: '#113f67', marginRight: '10px' }} />
+          <InputFilter
             type="email"
             name="email"
             placeholder="Enter your email address"
@@ -29,9 +40,10 @@ export const LoginForm = () => {
             title="Please enter a valid email address"
             required
           />
-        </div>
-        <div>
-          <input
+        </ContainerInput>
+        <ContainerInput>
+          <PiPasswordFill size={30} style={{ color: '#113f67', marginRight: '10px' }}/>
+          <InputFilter
             type="password"
             name="password"
             placeholder="Enter your password"
@@ -39,11 +51,11 @@ export const LoginForm = () => {
             title="The password must contain only Latin letters (both upper and lower case), numbers and other symbols"
             required
           />
-        </div>
-        <button type="submit">
-          Logis
-        </button>
-      </form>
-    </div>
+        </ContainerInput>
+        <LoginBtn type="submit">
+          Login <AiOutlineLogin style={{ marginLeft: '8px' }} />
+        </LoginBtn>
+      </FormLogin>
+    </LoginContainer>
   );
 };

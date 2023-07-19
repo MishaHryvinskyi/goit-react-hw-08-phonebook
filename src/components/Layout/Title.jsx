@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
+import { Title } from './Title.styled';
 
 const GlobalTitle = ({title}) => {
   return (
-    <h1>{title}</h1>
+    <Title>{title}</Title>
   );
 }
 

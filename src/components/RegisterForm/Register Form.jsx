@@ -1,5 +1,19 @@
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/Authorization/operation';
+import { 
+  PiAtBold,
+  PiPasswordFill,
+  PiUserBold,
+  PiCheckFatFill
+} from "react-icons/pi";
+import { RegisterContainer } from './RegisterForm.styled';
+import { 
+  LoginTitle,
+  FormLogin,
+  ContainerInput,
+  InputFilter,
+  LoginBtn
+} from '../LoginForm/LoginForm.styled';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -18,44 +32,44 @@ export const RegisterForm = () => {
   };
 
   return (
-    <div>
-      <h2>Register</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <input
+    <RegisterContainer>
+      <LoginTitle>Registration</LoginTitle>
+      <FormLogin onSubmit={handleSubmit}>
+        <ContainerInput>
+        <PiUserBold size={30} style={{ color: '#113f67', marginRight: '10px' }} />
+          <InputFilter
             type="text"
             name="name"
             placeholder="Enter your nane"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-            title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             required
           />
-        </div>
-        <div>
-          <input
+        </ContainerInput>
+        <ContainerInput>
+        <PiAtBold size={30} style={{ color: '#113f67', marginRight: '10px' }} />
+          <InputFilter
             type="email"
             name="email"
-            placeholder="Enter your email address"
+            placeholder="Enter your email"
             pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-            title="Please enter a valid email address"
             required
           />
-        </div>
-        <div>
-          <input
+        </ContainerInput>
+        <ContainerInput>
+        <PiPasswordFill size={30} style={{ color: '#113f67', marginRight: '10px' }}/>
+          <InputFilter
             type="password"
             name="password"
             placeholder="Enter your password"
             pattern="^[a-zA-Z0-9!@#$%^&*()-_=+`~[\]{}|:<>/?]+$"
-            title="The password must contain only Latin letters (both upper and lower case), numbers and other symbols"
             required
           />
-        </div>
+        </ContainerInput>
 
-        <button type="submit">
-          Register
-        </button>
-      </form>
-    </div>
+        <LoginBtn type="submit">
+        Registration <PiCheckFatFill />
+        </LoginBtn>
+      </FormLogin>
+    </RegisterContainer>
   );
 };

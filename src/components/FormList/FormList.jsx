@@ -5,6 +5,8 @@ import { nanoid } from '@reduxjs/toolkit';
 import { notifyOptions } from 'components/notifyOptions/notifyOperations';
 import { getVisibleContacts } from 'redux/Contacts/selector';
 import { addContact } from 'redux/Contacts/operations';
+import { FormatListForm, InputFilter, Container, SpanFormInput, FormBtn } from './FormatList.styled';
+import { LuUserPlus, LuPhone,  LuUser } from "react-icons/lu";
 
 const FormList = () => {
   const [name, setName] = useState('');
@@ -46,37 +48,39 @@ const FormList = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        <span>Name</span>
-        <input
-          type="text"
-          placeholder="Your name"
-          name="name"
-          value={name}
-          onChange={handleChange}
-          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-          required
-        />
-      </label>
-      <label>
-        <span>Number</span>
-        <input
-          type="tel"
-          placeholder="Your number"
-          name="number"
-          value={number}
-          onChange={handleChange}
-          pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-          title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-          required
-        />
-      </label>
-      <button type="submit">
-        Add to contacts
-      </button>
-    </form>
+    <FormatListForm onSubmit={handleSubmit}>
+      <Container>
+        <label>
+          <SpanFormInput>Name <LuUser style={{ marginLeft: '10px', }} size={'20px'} /></SpanFormInput>
+          <InputFilter
+            type="text"
+            placeholder="Your name"
+            name="name"
+            value={name}
+            onChange={handleChange}
+            pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+            title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+            required
+          />
+        </label>
+        <label>
+          <SpanFormInput>Number <LuPhone style={{ marginLeft: '10px', }} size={'20px'} /></SpanFormInput>
+          <InputFilter
+            type="tel"
+            placeholder="Your number"
+            name="number"
+            value={number}
+            onChange={handleChange}
+            pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+            title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+            required
+          />
+        </label>
+      </Container>
+      <FormBtn type="submit">
+        Add to contacts <LuUserPlus style={{ marginLeft: '20px', }} size={'20px'} />
+      </FormBtn>
+    </FormatListForm>
   );
 };
 
