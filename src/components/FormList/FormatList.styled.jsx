@@ -6,35 +6,44 @@ export const FormatListForm = styled.form`
     background-color: #a2a8d3;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 30px;
+`;
+
+export const Label = styled.label`
+    margin-bottom: 30px;
 `;
 
 export const InputFilter = styled.input`
+    margin-bottom: 30px;
     cursor: pointer;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
-    margin-bottom: 30px;
     width: 300px;
     height: 25px;
     border-radius: 20px;
-    border: solid 2px #d0c5e3;
-    padding: 5px 15px;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #38598b;
+    padding: 10px 20px;
+    box-shadow: -1px 12px 17px -6px rgba(56,89,139,1);
+    box-shadow: -1px 12px 17px -6px rgba(56,89,139,1);
+    box-shadow: -1px 12px 17px -6px rgba(56,89,139,1);
 
     &:hover {
         background-color: #fcffdb;
-        color: black;
+        color: #113f67;
         box-shadow: 0px 5px 36px 0px rgba(81,106,120,1);
     }
 `;
 
 export const SpanFormInput = styled.span`
-    font-size: 20px;
+    font-size: 23px;
     font-weight: 700;
     display: flex;
     justify-content: center;
-    color: #38598b;
+    color: #113f67;
 `;
 
 export const Container = styled.div`
@@ -43,21 +52,22 @@ export const Container = styled.div`
 
 export const FormBtn = styled.button`
     font-size: 18px;
-    padding: 15px 25px;
-    background-color: #113f67;
-    color: #e7eaf6;
+    font-weight: 600;
+    padding: 10px 18px;
+    background-color: #42b883;
+    color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 30px;
     cursor: pointer;
-    box-shadow:  0 0 5px #113f67,
-    0 0 10px #113f67,
-    0 0 20px #113f67;
+    box-shadow:  0 0 5px #42b883,
+    0 0 10px #42b883,
+    0 0 20px #42b883;
 
     &:hover {
-        background-color: #e7eaf6;
+        background-color: #97cba9;
         color: #38598b;
-        box-shadow:  0 0 5px #e7eaf6,
-        0 0 10px #e7eaf6,
-        0 0 20px #e7eaf6;
+        box-shadow:  0 0 5px #97cba9,
+        0 0 10px #97cba9,
+        0 0 20px #97cba9;
     }
 `;

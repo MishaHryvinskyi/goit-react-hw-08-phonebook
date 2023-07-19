@@ -1,9 +1,20 @@
 import React from 'react';
-import { ListItem, List, BtnDelite, Container, Number, Name } from './ContactList.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { getVisibleContacts } from 'redux/Contacts/selector';
 import { deleteContact } from 'redux/Contacts/operations';
-import { PiUserCircleBold, PiPhoneBold, PiTrashBold } from "react-icons/pi";
+import { 
+  PiUserCircleBold, 
+  PiPhoneBold, 
+  PiTrashBold 
+} from "react-icons/pi";
+import { 
+  ListItem, 
+  List, 
+  BtnDelite, 
+  Container, 
+  Number, 
+  Name
+} from './ContactList.styled';
 
 const ContactList = () => {
   const contacts = useSelector(getVisibleContacts);

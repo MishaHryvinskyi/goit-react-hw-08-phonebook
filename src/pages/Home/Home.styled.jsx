@@ -24,18 +24,18 @@ export const Link = styled(NavLink)`
     background-color: #e0ffcd;
     text-decoration: none;
     padding: 10px 20px;
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
     box-shadow:  0 0 5px #e0ffcd,
     0 0 10px #e0ffcd,
     0 0 20px #e0ffcd;
 
     &:hover {
-        background-color: #e7eaf6;
+        background-color: #97cba9;
         color: #38598b;
-        box-shadow:  0 0 5px #e7eaf6,
-    0 0 10px #e7eaf6,
-    0 0 20px #e7eaf6;
+        box-shadow:  0 0 5px #97cba9,
+    0 0 10px #97cba9,
+    0 0 20px #97cba9;
 `;
 
 export const ContainerBook = styled.div`

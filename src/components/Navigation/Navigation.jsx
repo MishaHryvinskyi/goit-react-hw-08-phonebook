@@ -2,7 +2,6 @@ import { useAuth } from '../../hooks/useAuth';
 import { HomeLink, Nav } from './Navigation.styled';
 import { AiOutlineHome, AiOutlineContacts } from "react-icons/ai";
 
-
 export const Navigation = () => {
   const { isLoggedIn } = useAuth();
 

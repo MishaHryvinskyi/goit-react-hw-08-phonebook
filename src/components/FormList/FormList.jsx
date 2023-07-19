@@ -5,7 +5,7 @@ import { nanoid } from '@reduxjs/toolkit';
 import { notifyOptions } from 'components/notifyOptions/notifyOperations';
 import { getVisibleContacts } from 'redux/Contacts/selector';
 import { addContact } from 'redux/Contacts/operations';
-import { FormatListForm, InputFilter, Container, SpanFormInput, FormBtn } from './FormatList.styled';
+import { FormatListForm, InputFilter, Container, SpanFormInput, FormBtn, Label } from './FormatList.styled';
 import { LuUserPlus, LuPhone,  LuUser } from "react-icons/lu";
 
 const FormList = () => {
@@ -24,7 +24,9 @@ const FormList = () => {
     );
 
     if (isAdded) {
-      toast.error(`${name}: is already in contacts`, notifyOptions);
+      toast.error(`${name}: is already in contacts`, {
+        position: 'top-center',
+      });
       return;
     }
 
@@ -50,35 +52,34 @@ const FormList = () => {
   return (
     <FormatListForm onSubmit={handleSubmit}>
       <Container>
-        <label>
-          <SpanFormInput>Name <LuUser style={{ marginLeft: '10px', }} size={'20px'} /></SpanFormInput>
+        <Label>
+          <SpanFormInput>Name <LuUser style={{ marginLeft: '10px', }} size={'30'} /></SpanFormInput>
           <InputFilter
             type="text"
-            placeholder="Your name"
+            placeholder="Name"
             name="name"
             value={name}
             onChange={handleChange}
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-            title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             required
           />
-        </label>
+        </Label>
         <label>
-          <SpanFormInput>Number <LuPhone style={{ marginLeft: '10px', }} size={'20px'} /></SpanFormInput>
+          <SpanFormInput>Number <LuPhone style={{ marginLeft: '10px', }} size={'30'} /></SpanFormInput>
           <InputFilter
+            style={{ marginBottom: '0px' }}
             type="tel"
-            placeholder="Your number"
+            placeholder="Number"
             name="number"
             value={number}
             onChange={handleChange}
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-            title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
           />
         </label>
       </Container>
       <FormBtn type="submit">
-        Add to contacts <LuUserPlus style={{ marginLeft: '20px', }} size={'20px'} />
+        Add to contacts <LuUserPlus size={'20px'} />
       </FormBtn>
     </FormatListForm>
   );

@@ -8,7 +8,6 @@ export const FormFilter = styled.form`
     align-items: center;
 `;
 
-
 export const InputFilter = styled.input`
     cursor: pointer;
     margin-left: auto;
@@ -29,11 +28,19 @@ export const InputFilter = styled.input`
 
     &:hover {
         background-color: #fcffdb;
-        color: black;
+        color: #a2a8d3;
         box-shadow: 0px 5px 36px 0px rgba(81,106,120,1);
     }
 `;
 
 export const Message = styled.p`
-    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #38598b;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #e7eaf6;
 `;

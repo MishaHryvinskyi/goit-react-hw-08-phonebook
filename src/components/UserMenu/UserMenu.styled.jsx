@@ -10,23 +10,30 @@ export const HederTitle = styled.h2`
     margin-right: 20px;
 `;
 
+export const UserName = styled.span`
+    color: #ff9a3c;
+`;
+
 export const BtnLog = styled.button`
-    font-size: 16px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
     color: #113f67;
-    background-color: #e7eaf6;
-    padding: 8px 18px;
-    border-radius: 10px;
+    background-color: #ff9a3c;
+    padding: 10px 18px;
+    border-radius: 30px;
     cursor: pointer;
     border: none;
-    box-shadow:  0 0 5px #e7eaf6,
-    0 0 10px #e7eaf6,
-    0 0 20px #e7eaf6;
+    box-shadow:  0 0 5px #ff9a3c,
+    0 0 10px #ff9a3c,
+    0 0 20px #ff9a3c;
 
     &:hover {
-        background-color: #a2a8d3;
+        background-color: #ff6f3c;
         color: #e7eaf6;
-        box-shadow:  0 0 5px #a2a8d3,
-    0 0 10px #a2a8d3,
-    0 0 20px #a2a8d3;
+        box-shadow:  0 0 5px #ff6f3c,
+    0 0 10px #ff6f3c,
+    0 0 20px #ff6f3c;
     }
 `;

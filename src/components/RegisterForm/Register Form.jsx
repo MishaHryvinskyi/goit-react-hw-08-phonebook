@@ -67,7 +67,7 @@ export const RegisterForm = () => {
         </ContainerInput>
 
         <LoginBtn type="submit">
-        Registration <PiCheckFatFill />
+        Registration <PiCheckFatFill style={{marginLeft: '8px'}}/>
         </LoginBtn>
       </FormLogin>
     </RegisterContainer>
